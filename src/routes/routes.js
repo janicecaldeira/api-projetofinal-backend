@@ -8,7 +8,6 @@ routes.get("/carros/:id", CarroMiddleware.validaID, CarroController.getById);
 routes.post("/carros", CarroController.create);
 routes.put("/carros/:id", CarroMiddleware.validaID, CarroController.update);
 routes.delete("/carros/:id", CarroMiddleware.validaID, CarroController.del);
-routes.get("/filterByName", CarroController.filterByName);
 routes.get("/filterAll", CarroController.filterAll);
 
 module.exports = routes;
