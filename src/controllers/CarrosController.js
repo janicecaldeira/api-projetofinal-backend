@@ -1,8 +1,8 @@
-const carro = require("../models/carro");
+const Carro = require("../models/Carro");
 
 const getAll = async (req, res) => {
   try {
-    const carros = await carro.find(); // Promisse
+    const carros = await Carro.find();
     if (carros.length === 0)
       return res
         .status(404)
@@ -17,9 +17,9 @@ const getById = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const carro = await carro.findById(id);
+    const carro = await Carro.findById(id);
     if (!carro) {
-      res.status(404).json({ message: "carro não encontrado" });
+      res.status(404).json({ message: "Carro não encontrado" });
       return;
     }
     return res.send({ carro });
@@ -38,7 +38,7 @@ const create = async (req, res) => {
     return;
   }
 
-  const novoCarro = await new carro({
+  const novoCarro = await new Carro({
     nome,
     marca,
     imagem,
@@ -48,7 +48,7 @@ const create = async (req, res) => {
     await novoCarro.save();
     return res
       .status(201)
-      .send({ message: "carro criado com sucesso", novoCarro });
+      .send({ message: "Carro criado com sucesso", novoCarro });
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
@@ -70,7 +70,7 @@ const update = async (req, res) => {
 
   try {
     await res.carro.save();
-    res.send({ message: "carro alterado com sucesso!" });
+    res.send({ message: "Carro alterado com sucesso!" });
   } catch (err) {
     res.status(500).send({ error: err.message });
   }
@@ -79,23 +79,9 @@ const update = async (req, res) => {
 const del = async (req, res) => {
   try {
     await res.carro.remove();
-    return res.send({ message: "carro removido com sucesso!" });
+    return res.send({ message: "Carro removido com sucesso!" });
   } catch (err) {
     return res.status(500).send({ erro: err.message });
-  }
-};
-
-const filterByName = async (req, res) => {
-  const nome = req.query.nome;
-  if (!nome) {
-    res.status(400).send({ erro: "Parâmetro não recebido" });
-    return;
-  }
-  try {
-    const carros = await carro.find({ nome: { $regex: `${nome}` } });
-    return res.send({ carros });
-  } catch (err) {
-    return res.status(500).send({ error: err.message });
   }
 };
 
@@ -106,7 +92,7 @@ const filterAll = async (req, res) => {
   !marca ? (marca = "") : (marca = marca);
 
   try {
-    const carros = await carro.find({
+    const carros = await Carro.find({
       nome: { $regex: `${nome}`, $options: "i" },
       marca: { $regex: `${marca}`, $options: "i" },
     });
@@ -126,6 +112,5 @@ module.exports = {
   create,
   update,
   del,
-  filterByName,
   filterAll,
 };
