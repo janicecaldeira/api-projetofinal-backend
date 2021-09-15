@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Carro = require("../models/carro");
+const Carro = require("../models/Carro");
 
 const validaID = async (req, res, next) => {
   const { id } = req.params;
@@ -12,7 +12,7 @@ const validaID = async (req, res, next) => {
   try {
     const carro = await Carro.findById(id);
     if(!carro){
-        return res.status(404).send({msgMiddleware: "carro não encontrado."})
+        return res.status(404).send({msgMiddleware: "Carro não encontrado."})
     }
     res.carro = carro
   } catch (err) {
