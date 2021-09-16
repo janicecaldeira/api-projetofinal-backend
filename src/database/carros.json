@@ -1,0 +1,47 @@
+[
+  {
+  "nome": "RS6 Avant",
+  "marca": "Audi",
+  "imagem": "https://revistacarro.com.br/wp-content/uploads/2019/10/Audi-RS6-Avant_1.jpg"
+},
+{
+  "nome": "RSQ8",
+  "marca": "Audi",
+  "imagem": "https://www.revistafullpower.com.br/wp-content/uploads/2020/06/au01.jpg"
+},
+{
+  "nome": "720S Spider",
+  "marca": "McLaren",
+  "imagem": "https://cdn.motor1.com/images/mgl/zZxN0/s3/2019-mclaren-720s-spider.jpg"
+},
+{
+  "nome": "A45 S AMG",
+  "marca": "Mercedes",
+  "imagem": "https://quatrorodas.abril.com.br/wp-content/uploads/2019/07/6.jpg?quality=70&strip=info"
+},
+{
+  "nome": "G63",
+  "marca": "Mercedes",
+  "imagem": "https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2021/202105/20210507/mercedesbenz-g-63-amg-4.0-v8-turbo-gasolina-4matic-speedshift-wmimagem12172969625.jpg"
+},
+{
+  "nome": "Urus",
+  "marca": "Lamborghini",
+  "imagem": "https://www.autoo.com.br/fotos/2017/12/1280_960/lamborghini_urus_2018_1_05122017_8141_1280_960.jpg"
+},
+{
+  "nome": "M3 Competition",
+  "marca": "BMW",
+  "imagem": "https://revistacarro.com.br/wp-content/uploads/2021/04/BMW-M3-Competition_1.jpg"
+},
+{
+  "nome": "458 Itália",
+  "marca": "Ferrari",
+  "imagem": "http://lh3.ggpht.com/_UX7M6asX-CM/SxSQyZgZYBI/AAAAAAAACrs/BzfYLyMo6uY/458-1.jpg"
+},
+{
+  "nome": "GTC4Lusso",
+  "marca": "Ferrari",
+  "imagem": "https://quatrorodas.abril.com.br/wp-content/uploads/2019/03/ferrari-gtc4lusso.jpg?quality=70&strip=info"
+}
+]
