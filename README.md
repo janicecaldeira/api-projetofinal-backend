@@ -27,7 +27,8 @@ API backend construída com o objetivo de exibir carros de uma concessionária d
 - É necessário o NodeJs e NPM instalado.
 
 - Para executar o projeto com o nodemon, digite no terminal:
-```
+
+```#Terminal
 npm run dev
 ```
 
@@ -37,15 +38,15 @@ Você pode utilizar o Thunder Client (é um plugin no VSCode) ou qualquer ferram
 
 Exemplos de URLs:
 
-- Essa é a URL de teste padrão: http://localhost:3000/carros
+- Essa é a URL de teste padrão: <http://localhost:3000/carros>
 
-- Para buscar por ID, Editar ou Apagar, insira o ID na URL: http://localhost:3000/carros/ID
+- Para buscar por ID, Editar ou Apagar, insira o ID na URL: <http://localhost:3000/carros/ID>
 
-- Para fazer uma busca com query string, esse é um exemplo de URL: http://localhost:3000/filterAll/?nome=
+- Para fazer uma busca com query string, esse é um exemplo de URL: <http://localhost:3000/filterAll/?nome>=
 
 Essa é a estrutura JSON para fazer o POST e o PUT:
 
-```
+```#Json
 {
   "nome": "Range Rover Sport",
   "marca": "Land Rover",
@@ -57,7 +58,7 @@ Essa é a estrutura JSON para fazer o POST e o PUT:
 
 Desenvolver a integração com o frontend em React, fiz um exemplo de como deveria ser a página da Avalon Motors.
 
-https://avalon-app.netlify.app/
+<https://avalon-app.netlify.app/>
 
 Ao clicar em *Carros* o usuário deveria ser direcionado para uma página com cards exibindo os carros cadastrados.
 
